@@ -1,0 +1,770 @@
+[
+  {
+    "occupation": "Data Analyst",
+    "skills_required": [
+      {
+        "skill": "SQL",
+        "weight": 5
+      },
+      {
+        "skill": "Excel",
+        "weight": 4
+      },
+      {
+        "skill": "Tableau",
+        "weight": 4
+      },
+      {
+        "skill": "Statistics",
+        "weight": 3
+      },
+      {
+        "skill": "Python",
+        "weight": 3
+      },
+      {
+        "skill": "Data Cleaning",
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "occupation": "Software Engineer",
+    "skills_required": [
+      {
+        "skill": "Data Structures",
+        "weight": 5
+      },
+      {
+        "skill": "Algorithms",
+        "weight": 5
+      },
+      {
+        "skill": "Python",
+        "weight": 4
+      },
+      {
+        "skill": "Git",
+        "weight": 3
+      },
+      {
+        "skill": "APIs",
+        "weight": 3
+      },
+      {
+        "skill": "Unit Testing",
+        "weight": 2
+      },
+      {
+        "skill": "Linux",
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "occupation": "Cloud Engineer",
+    "skills_required": [
+      {
+        "skill": "AWS",
+        "weight": 5
+      },
+      {
+        "skill": "Linux",
+        "weight": 4
+      },
+      {
+        "skill": "Networking",
+        "weight": 4
+      },
+      {
+        "skill": "Terraform",
+        "weight": 3
+      },
+      {
+        "skill": "Docker",
+        "weight": 3
+      },
+      {
+        "skill": "CI/CD",
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "occupation": "Cybersecurity Analyst",
+    "skills_required": [
+      {
+        "skill": "Networking",
+        "weight": 5
+      },
+      {
+        "skill": "SIEM",
+        "weight": 4
+      },
+      {
+        "skill": "Linux",
+        "weight": 4
+      },
+      {
+        "skill": "Threat Modeling",
+        "weight": 3
+      },
+      {
+        "skill": "Incident Response",
+        "weight": 3
+      },
+      {
+        "skill": "Python",
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "occupation": "Product Manager",
+    "skills_required": [
+      {
+        "skill": "Stakeholder Management",
+        "weight": 5
+      },
+      {
+        "skill": "User Research",
+        "weight": 4
+      },
+      {
+        "skill": "Roadmapping",
+        "weight": 4
+      },
+      {
+        "skill": "Analytics",
+        "weight": 3
+      },
+      {
+        "skill": "Writing",
+        "weight": 3
+      },
+      {
+        "skill": "A/B Testing",
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "occupation": "Data Scientist",
+    "skills_required": [
+      {
+        "skill": "Python",
+        "weight": 5
+      },
+      {
+        "skill": "SQL",
+        "weight": 4
+      },
+      {
+        "skill": "Machine Learning",
+        "weight": 5
+      },
+      {
+        "skill": "Data Visualization",
+        "weight": 4
+      },
+      {
+        "skill": "Statistical Modeling",
+        "weight": 5
+      },
+      {
+        "skill": "Data Wrangling",
+        "weight": 4
+      },
+      {
+        "skill": "Communication",
+        "weight": 3
+      },
+      {
+        "skill": "Problem-solving",
+        "weight": 5
+      },
+      {
+        "skill": "R",
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "occupation": "DevOps Engineer",
+    "skills_required": [
+      {
+        "skill": "Linux System Administration",
+        "weight": 5
+      },
+      {
+        "skill": "Docker",
+        "weight": 4
+      },
+      {
+        "skill": "Kubernetes",
+        "weight": 5
+      },
+      {
+        "skill": "CI/CD Pipelines",
+        "weight": 5
+      },
+      {
+        "skill": "Terraform or CloudFormation",
+        "weight": 4
+      },
+      {
+        "skill": "Git",
+        "weight": 4
+      },
+      {
+        "skill": "AWS or Azure or GCP",
+        "weight": 5
+      },
+      {
+        "skill": "Scripting (Bash, Python)",
+        "weight": 4
+      },
+      {
+        "skill": "Monitoring and Logging Tools (Prometheus, Grafana, ELK)",
+        "weight": 4
+      }
+    ]
+  },
+  {
+    "occupation": "UI/UX Designer",
+    "skills_required": [
+      {
+        "skill": "Figma",
+        "weight": 5
+      },
+      {
+        "skill": "Adobe XD",
+        "weight": 4
+      },
+      {
+        "skill": "User Research",
+        "weight": 5
+      },
+      {
+        "skill": "Information Architecture",
+        "weight": 4
+      },
+      {
+        "skill": "Interaction Design",
+        "weight": 5
+      },
+      {
+        "skill": "Prototyping",
+        "weight": 4
+      },
+      {
+        "skill": "UI Design Principles",
+        "weight": 5
+      },
+      {
+        "skill": "Accessibility",
+        "weight": 4
+      },
+      {
+        "skill": "User Testing",
+        "weight": 4
+      }
+    ]
+  },
+  {
+    "occupation": "Digital Marketer",
+    "skills_required": [
+      {
+        "skill": "SEO",
+        "weight": 5
+      },
+      {
+        "skill": "SEM",
+        "weight": 4
+      },
+      {
+        "skill": "Social Media Marketing",
+        "weight": 5
+      },
+      {
+        "skill": "Content Marketing",
+        "weight": 4
+      },
+      {
+        "skill": "Email Marketing",
+        "weight": 3
+      },
+      {
+        "skill": "Google Analytics",
+        "weight": 4
+      },
+      {
+        "skill": "Marketing Automation",
+        "weight": 3
+      },
+      {
+        "skill": "A/B Testing",
+        "weight": 3
+      },
+      {
+        "skill": "Copywriting",
+        "weight": 4
+      }
+    ]
+  },
+  {
+    "occupation": "IT Project Manager",
+    "skills_required": [
+      {
+        "skill": "Project Management Methodologies (Agile, Waterfall)",
+        "weight": 5
+      },
+      {
+        "skill": "Risk Management",
+        "weight": 4
+      },
+      {
+        "skill": "Budget Management",
+        "weight": 4
+      },
+      {
+        "skill": "Stakeholder Management",
+        "weight": 5
+      },
+      {
+        "skill": "Communication (written and verbal)",
+        "weight": 5
+      },
+      {
+        "skill": "Team Leadership",
+        "weight": 4
+      },
+      {
+        "skill": "Problem-solving",
+        "weight": 4
+      },
+      {
+        "skill": "Technical Proficiency (IT Infrastructure)",
+        "weight": 3
+      },
+      {
+        "skill": "MS Project or similar tools",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "occupation": "Business Analyst",
+    "skills_required": [
+      {
+        "skill": "SQL",
+        "weight": 4
+      },
+      {
+        "skill": "Data Analysis",
+        "weight": 5
+      },
+      {
+        "skill": "Requirements Elicitation",
+        "weight": 5
+      },
+      {
+        "skill": "Process Improvement",
+        "weight": 4
+      },
+      {
+        "skill": "Problem-Solving",
+        "weight": 5
+      },
+      {
+        "skill": "Communication (written & verbal)",
+        "weight": 5
+      },
+      {
+        "skill": "Spreadsheet Software (Excel)",
+        "weight": 4
+      },
+      {
+        "skill": "Business Modeling",
+        "weight": 3
+      },
+      {
+        "skill": "Data Visualization",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "occupation": "Mobile App Developer",
+    "skills_required": [
+      {
+        "skill": "Java",
+        "weight": 5
+      },
+      {
+        "skill": "Kotlin",
+        "weight": 4
+      },
+      {
+        "skill": "Swift",
+        "weight": 4
+      },
+      {
+        "skill": "React Native",
+        "weight": 4
+      },
+      {
+        "skill": "Flutter",
+        "weight": 4
+      },
+      {
+        "skill": "RESTful APIs",
+        "weight": 5
+      },
+      {
+        "skill": "Git",
+        "weight": 3
+      },
+      {
+        "skill": "Agile methodologies",
+        "weight": 3
+      },
+      {
+        "skill": "UI/UX design principles",
+        "weight": 3
+      },
+      {
+        "skill": "Testing and debugging",
+        "weight": 4
+      }
+    ]
+  },
+  {
+    "occupation": "Technical Writer",
+    "skills_required": [
+      {
+        "skill": "Technical Writing",
+        "weight": 5
+      },
+      {
+        "skill": "API Documentation",
+        "weight": 4
+      },
+      {
+        "skill": "Software Documentation",
+        "weight": 5
+      },
+      {
+        "skill": "Editing and Proofreading",
+        "weight": 4
+      },
+      {
+        "skill": "XML",
+        "weight": 3
+      },
+      {
+        "skill": "Markdown",
+        "weight": 4
+      },
+      {
+        "skill": "HTML",
+        "weight": 3
+      },
+      {
+        "skill": "Communication (written)",
+        "weight": 5
+      },
+      {
+        "skill": "Version Control (Git)",
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "occupation": "Network Engineer",
+    "skills_required": [
+      {
+        "skill": "TCP/IP",
+        "weight": 5
+      },
+      {
+        "skill": "Routing Protocols (BGP, OSPF)",
+        "weight": 5
+      },
+      {
+        "skill": "Switching Technologies",
+        "weight": 4
+      },
+      {
+        "skill": "Network Security (Firewalls, IDS/IPS)",
+        "weight": 4
+      },
+      {
+        "skill": "Network Monitoring Tools (SolarWinds, Nagios)",
+        "weight": 3
+      },
+      {
+        "skill": "IP Addressing and Subnetting",
+        "weight": 5
+      },
+      {
+        "skill": "VLANs and Trunking",
+        "weight": 4
+      },
+      {
+        "skill": "Troubleshooting",
+        "weight": 5
+      },
+      {
+        "skill": "Cloud Networking (AWS, Azure, GCP)",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "occupation": "QA Engineer",
+    "skills_required": [
+      {
+        "skill": "Test Case Design",
+        "weight": 5
+      },
+      {
+        "skill": "SQL",
+        "weight": 3
+      },
+      {
+        "skill": "Selenium",
+        "weight": 4
+      },
+      {
+        "skill": "API Testing",
+        "weight": 4
+      },
+      {
+        "skill": "Defect Tracking (Jira/Bugzilla)",
+        "weight": 4
+      },
+      {
+        "skill": "Test Automation Frameworks",
+        "weight": 5
+      },
+      {
+        "skill": "Communication Skills",
+        "weight": 4
+      },
+      {
+        "skill": "Performance Testing",
+        "weight": 3
+      },
+      {
+        "skill": "Regression Testing",
+        "weight": 4
+      }
+    ]
+  },
+  {
+    "occupation": "Machine Learning Engineer",
+    "skills_required": [
+      {
+        "skill": "Python",
+        "weight": 5
+      },
+      {
+        "skill": "TensorFlow",
+        "weight": 4
+      },
+      {
+        "skill": "PyTorch",
+        "weight": 4
+      },
+      {
+        "skill": "Scikit-learn",
+        "weight": 3
+      },
+      {
+        "skill": "SQL",
+        "weight": 2
+      },
+      {
+        "skill": "Data Visualization (Matplotlib, Seaborn)",
+        "weight": 3
+      },
+      {
+        "skill": "Cloud Computing (AWS, GCP, Azure)",
+        "weight": 4
+      },
+      {
+        "skill": "Model Deployment",
+        "weight": 4
+      },
+      {
+        "skill": "Version Control (Git)",
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "occupation": "Frontend Developer",
+    "skills_required": [
+      {
+        "skill": "HTML",
+        "weight": 5
+      },
+      {
+        "skill": "CSS",
+        "weight": 5
+      },
+      {
+        "skill": "JavaScript",
+        "weight": 5
+      },
+      {
+        "skill": "React",
+        "weight": 4
+      },
+      {
+        "skill": "Git",
+        "weight": 3
+      },
+      {
+        "skill": "Responsive Design",
+        "weight": 4
+      },
+      {
+        "skill": "REST APIs",
+        "weight": 3
+      },
+      {
+        "skill": "Testing Frameworks (Jest, Cypress)",
+        "weight": 3
+      },
+      {
+        "skill": "Webpack/Parcel",
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "occupation": "Backend Developer",
+    "skills_required": [
+      {
+        "skill": "Python",
+        "weight": 5
+      },
+      {
+        "skill": "Java",
+        "weight": 4
+      },
+      {
+        "skill": "Node.js",
+        "weight": 4
+      },
+      {
+        "skill": "SQL",
+        "weight": 5
+      },
+      {
+        "skill": "NoSQL",
+        "weight": 3
+      },
+      {
+        "skill": "RESTful APIs",
+        "weight": 5
+      },
+      {
+        "skill": "Git",
+        "weight": 4
+      },
+      {
+        "skill": "AWS/Azure/GCP",
+        "weight": 3
+      },
+      {
+        "skill": "Containerization (Docker, Kubernetes)",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "occupation": "Full Stack Developer",
+    "skills_required": [
+      {
+        "skill": "JavaScript",
+        "weight": 5
+      },
+      {
+        "skill": "React",
+        "weight": 4
+      },
+      {
+        "skill": "Node.js",
+        "weight": 4
+      },
+      {
+        "skill": "SQL",
+        "weight": 3
+      },
+      {
+        "skill": "Git",
+        "weight": 4
+      },
+      {
+        "skill": "RESTful APIs",
+        "weight": 5
+      },
+      {
+        "skill": "Agile methodologies",
+        "weight": 3
+      },
+      {
+        "skill": "Testing frameworks (Jest, Mocha etc.)",
+        "weight": 3
+      },
+      {
+        "skill": "HTML/CSS",
+        "weight": 4
+      }
+    ]
+  },
+  {
+    "occupation": "Database Administrator",
+    "skills_required": [
+      {
+        "skill": "SQL",
+        "weight": 5
+      },
+      {
+        "skill": "MySQL",
+        "weight": 4
+      },
+      {
+        "skill": "PostgreSQL",
+        "weight": 4
+      },
+      {
+        "skill": "Oracle Database",
+        "weight": 3
+      },
+      {
+        "skill": "Database Design",
+        "weight": 5
+      },
+      {
+        "skill": "Data Modeling",
+        "weight": 4
+      },
+      {
+        "skill": "Performance Tuning",
+        "weight": 5
+      },
+      {
+        "skill": "Backup and Recovery",
+        "weight": 4
+      },
+      {
+        "skill": "Linux",
+        "weight": 3
+      }
+    ]
+  }
+]
