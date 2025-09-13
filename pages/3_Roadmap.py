@@ -2,6 +2,7 @@ import streamlit as st
 from core.scoring import skill_gaps
 from core import llm
 from core.courses import links_for_gap
+from core.job_scraper import job_scraper
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
@@ -225,14 +226,26 @@ with col3:
     required_skills_set = set(s['skill'] for s in target['skills_required'])
     matching_skills = list(user_skills_set.intersection(required_skills_set))
     
-    from core.jobs import refined_google_jobs, job_links
+    if st.button("🔍 Find Jobs", use_container_width=True):
+        with st.spinner("🔍 Searching for jobs..."):
+            search_query = f"{choice} {' '.join(matching_skills[:3])}"
+            jobs = job_scraper.get_professional_job_recommendations(
+                role=search_query,
+                skills=matching_skills,
+                max_results=10
+            )
+            st.session_state.roadmap_jobs = jobs
+            st.session_state.show_roadmap_jobs = True
     
-    smart_link = refined_google_jobs(choice, matching_skills[:3])
-    st.link_button("🔍 Smart Job Search", smart_link, use_container_width=True)
-    
-    regular_links = job_links(choice)
-    for platform, link in list(regular_links.items())[:2]:  # Show only 2 platforms
-        st.link_button(f"📊 {platform}", link, use_container_width=True)
+    if st.session_state.get("show_roadmap_jobs", False):
+        jobs = st.session_state.get("roadmap_jobs", [])
+        if jobs:
+            st.markdown("**Recent Job Opportunities:**")
+            job_scraper.display_jobs(jobs, f"Jobs for {choice}")
+            
+            if st.button("❌ Hide Jobs"):
+                st.session_state.show_roadmap_jobs = False
+                st.rerun()
 
 # Action buttons
 st.divider()
