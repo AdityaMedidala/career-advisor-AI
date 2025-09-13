@@ -1,0 +1,38 @@
+[
+    {
+      "occupation": "Data Analyst",
+      "skills_required": ["SQL", "Excel", "Tableau", "Statistics", "Python", "Data Cleaning"],
+      "typical_courses": ["Intro to SQL", "Tableau Fundamentals", "Python for Data Analysis"],
+      "median_salary_usd": 72000,
+      "sample_job_queries": ["Data Analyst remote", "Business Intelligence Analyst"]
+    },
+    {
+      "occupation": "Software Engineer",
+      "skills_required": ["Python", "Git", "Data Structures", "Algorithms", "APIs", "Unit Testing", "Linux"],
+      "typical_courses": ["CS Fundamentals", "Algorithms", "APIs in Python"],
+      "median_salary_usd": 105000,
+      "sample_job_queries": ["Software Engineer remote", "Backend Developer"]
+    },
+    {
+      "occupation": "Cloud Engineer",
+      "skills_required": ["Linux", "Networking", "AWS", "Terraform", "Docker", "CI/CD"],
+      "typical_courses": ["AWS Cloud Practitioner", "Terraform Basics", "Docker Essentials"],
+      "median_salary_usd": 115000,
+      "sample_job_queries": ["Cloud Engineer remote", "Site Reliability Engineer"]
+    },
+    {
+      "occupation": "Cybersecurity Analyst",
+      "skills_required": ["Networking", "Linux", "SIEM", "Threat Modeling", "Python", "Incident Response"],
+      "typical_courses": ["Security Fundamentals", "SOC Analyst", "Network Security"],
+      "median_salary_usd": 98000,
+      "sample_job_queries": ["SOC Analyst", "Cybersecurity Analyst remote"]
+    },
+    {
+      "occupation": "Product Manager",
+      "skills_required": ["User Research", "Roadmapping", "Analytics", "A/B Testing", "Stakeholder Management", "Writing"],
+      "typical_courses": ["Product Management 101", "Experimentation"],
+      "median_salary_usd": 120000,
+      "sample_job_queries": ["Product Manager remote", "Associate Product Manager"]
+    }
+  ]
+  
