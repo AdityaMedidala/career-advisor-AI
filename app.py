@@ -57,222 +57,70 @@ if st.sidebar.button("🔄 Reset Session", use_container_width=True):
     st.rerun()
 
 # Main Content
-st.title("🎯 One-Stop Personalized Career & Education Advisor")
+st.title("🎯 Career & Education Advisor")
 st.markdown("### Your AI-Powered Career Transformation Platform")
 
 # Hero section with key features
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.info("**🧠 AI-Powered Analysis**\nLeverage Google's Gemini AI to extract and analyze your skills from resumes and profiles")
+    st.info("**🧠 AI-Powered Analysis**\nExtract and analyze your skills from resumes and profiles")
 
 with col2:
-    st.success("**🎯 Perfect Job Matching**\nFind roles that align with your skills using our intelligent scoring algorithm")
+    st.success("**🎯 Perfect Job Matching**\nFind roles that align with your skills using intelligent scoring")
 
 with col3:
-    st.warning("**🗺️ Personalized Roadmaps**\nGet customized 6-week learning plans tailored to your goals and schedule")
-
-st.divider()
-
-# Job Market Insights Section
-st.markdown("## 📈 Current Job Market Insights")
-
-# Load occupations data for insights
-@st.cache_data
-def get_market_data():
-    occupations = load_occupations()
-    return occupations
-
-try:
-    market_data = get_market_data()
-    
-    if market_data:
-        # Create market insights
-        col1, col2 = st.columns([2, 1])
-        
-        with col1:
-            st.markdown("### 🔥 Most In-Demand Skills Across All Roles")
-            
-            # Aggregate skill data
-            skill_counts = {}
-            skill_importance = {}
-            
-            for occupation in market_data:
-                for skill_obj in occupation.get('skills_required', []):
-                    skill = skill_obj['skill']
-                    weight = skill_obj['weight']
-                    
-                    if skill in skill_counts:
-                        skill_counts[skill] += 1
-                        skill_importance[skill] += weight
-                    else:
-                        skill_counts[skill] = 1
-                        skill_importance[skill] = weight
-            
-            # Calculate average importance and create DataFrame
-            skills_data = []
-            for skill, count in skill_counts.items():
-                avg_importance = skill_importance[skill] / count
-                skills_data.append({
-                    'Skill': skill,
-                    'Demand_Frequency': count,
-                    'Average_Importance': avg_importance,
-                    'Total_Score': count * avg_importance
-                })
-            
-            skills_df = pd.DataFrame(skills_data)
-            top_skills = skills_df.nlargest(10, 'Total_Score')
-            
-            # Create horizontal bar chart
-            fig_skills = px.bar(
-                top_skills, 
-                x='Total_Score', 
-                y='Skill',
-                color='Average_Importance',
-                orientation='h',
-                title="Top 10 Skills by Market Demand × Importance",
-                color_continuous_scale='Viridis',
-                hover_data=['Demand_Frequency', 'Average_Importance']
-            )
-            fig_skills.update_layout(height=400, yaxis={'categoryorder':'total ascending'})
-            st.plotly_chart(fig_skills, use_container_width=True)
-        
-        with col2:
-            st.markdown("### 📊 Market Stats")
-            
-            # Key metrics
-            total_roles = len(market_data)
-            total_skills = len(skill_counts)
-            avg_skills_per_role = sum(len(occ['skills_required']) for occ in market_data) / len(market_data)
-            
-            st.metric("Total Career Paths", total_roles)
-            st.metric("Unique Skills Tracked", total_skills)
-            st.metric("Avg Skills per Role", f"{avg_skills_per_role:.1f}")
-            
-            # Most versatile skills
-            st.markdown("**🌟 Most Versatile Skills:**")
-            versatile_skills = skills_df.nlargest(5, 'Demand_Frequency')
-            for _, row in versatile_skills.iterrows():
-                st.write(f"• **{row['Skill']}** - Required in {row['Demand_Frequency']}/{total_roles} roles")
-        
-        st.divider()
-        
-        # Career Growth Trends
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.markdown("### 🚀 High-Growth Career Fields")
-            
-            # Simulate growth data based on skill complexity and demand
-            growth_data = []
-            field_mapping = {
-                'Data': ['Data Scientist', 'Data Analyst', 'Business Analyst', 'Database Administrator'],
-                'Technology': ['Software Engineer', 'Full Stack Developer', 'Frontend Developer', 'Backend Developer'],
-                'Cloud & DevOps': ['DevOps Engineer', 'Cloud Engineer'],
-                'AI & ML': ['Machine Learning Engineer'],
-                'Security': ['Cybersecurity Analyst', 'Network Engineer'],
-                'Design & UX': ['UI/UX Designer'],
-                'Management': ['Product Manager', 'IT Project Manager']
-            }
-            
-            for field, roles in field_mapping.items():
-                field_roles = [occ for occ in market_data if occ['occupation'] in roles]
-                if field_roles:
-                    avg_complexity = sum(len(role['skills_required']) for role in field_roles) / len(field_roles)
-                    # Simulate growth percentage (in real app, this would come from labor statistics)
-                    growth = random.randint(8, 25)  # Simulated 8-25% growth
-                    growth_data.append({'Field': field, 'Growth_Rate': growth, 'Complexity': avg_complexity})
-            
-            growth_df = pd.DataFrame(growth_data).sort_values('Growth_Rate', ascending=False)
-            
-            for _, row in growth_df.head(5).iterrows():
-                st.write(f"📈 **{row['Field']}**: {row['Growth_Rate']}% projected growth")
-        
-        with col2:
-            st.markdown("### 💰 Salary Potential Indicators")
-            
-            # Create salary indicator based on skill complexity and importance
-            salary_data = []
-            for occupation in market_data:
-                skill_complexity = sum(skill['weight'] for skill in occupation['skills_required'])
-                num_skills = len(occupation['skills_required'])
-                # Simulate salary ranges (in real app, integrate with salary APIs)
-                base_salary = 50000 + (skill_complexity * 8000) + (num_skills * 3000)
-                salary_range = f"${base_salary:,} - ${base_salary + 30000:,}"
-                salary_data.append({
-                    'Role': occupation['occupation'],
-                    'Complexity_Score': skill_complexity,
-                    'Salary_Range': salary_range,
-                    'Base_Salary': base_salary
-                })
-            
-            salary_df = pd.DataFrame(salary_data).sort_values('Base_Salary', ascending=False)
-            
-            st.markdown("**Top earning potential roles:**")
-            for _, row in salary_df.head(5).iterrows():
-                st.write(f"💵 **{row['Role']}**: {row['Salary_Range']}")
-    
-    else:
-        st.error("Unable to load market data for insights.")
-
-except Exception as e:
-    st.error(f"Error loading market insights: {str(e)}")
+    st.warning("**🗺️ Personalized Roadmaps**\nGet customized learning plans tailored to your goals")
 
 st.divider()
 
 # Getting Started Guide
 st.markdown("## 🚀 How to Get Started")
 
-steps_col1, steps_col2 = st.columns(2)
+# Simple 4-step process
+col1, col2, col3, col4 = st.columns(4)
 
-with steps_col1:
-    st.markdown("""
-    ### Your 4-Step Career Journey:
+with col1:
+    st.markdown("**1. 📝 Create Profile**\n\nUpload resume or describe your background")
     
-    **1. 📝 Create Your Profile**
-    - Upload your resume or describe your background
-    - Let AI extract and analyze your skills
-    - Get strategic career insights
+with col2:
+    st.markdown("**2. 🎯 Find Matches**\n\nDiscover roles that fit your skills")
     
-    **2. 🎯 Find Perfect Matches**
-    - Discover roles that fit your skill set
-    - See detailed match scores and skill gaps
-    - Explore smart job search links
-    """)
+with col3:
+    st.markdown("**3. 🗺️ Build Roadmap**\n\nGet personalized learning plans")
+    
+with col4:
+    st.markdown("**4. 🤖 AI Coach**\n\nGet career guidance and support")
 
-with steps_col2:
-    st.markdown("""
-    ### Advanced Features:
-    
-    **3. 🗺️ Build Your Roadmap**
-    - Get personalized 6-week learning plans
-    - Interactive skill-building modules
-    - Resume and interview preparation
-    
-    **4. 🤖 AI Career Coaching**
-    - Chat with your personal AI coach
-    - Get answers about your career path
-    - Continuous guidance and support
-    """)
+st.divider()
 
 # Call to Action
-st.markdown("---")
-col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    if not st.session_state.get("skills"):
-        st.markdown("### 👉 Ready to transform your career?")
+if not st.session_state.get("skills"):
+    st.markdown("### 👉 Ready to transform your career?")
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
         if st.button("🚀 Start Your Profile Now", type="primary", use_container_width=True):
             st.switch_page("pages/1_Profile.py")
-    else:
-        st.success("✅ Profile created! Continue your journey:")
+else:
+    st.success("✅ Profile created! Continue your journey:")
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
         if not st.session_state.get("matches"):
             if st.button("🎯 Find Your Matches", type="primary", use_container_width=True):
                 st.switch_page("pages/2_Matches.py")
-        elif not st.session_state.get("roadmap"):
-            if st.button("🗺️ Create Learning Roadmap", type="primary", use_container_width=True):
+        else:
+            st.success("✅ Matches found!")
+    
+    with col2:
+        if not st.session_state.get("roadmap"):
+            if st.button("🗺️ Create Roadmap", type="primary", use_container_width=True):
                 st.switch_page("pages/3_Roadmap.py")
         else:
-            if st.button("🤖 Talk to AI Coach", type="primary", use_container_width=True):
-                st.switch_page("pages/4_AI_Coach.py")
+            st.success("✅ Roadmap created!")
+    
+    with col3:
+        if st.button("🤖 Talk to AI Coach", type="primary", use_container_width=True):
+            st.switch_page("pages/4_AI_Coach.py")
 
 # Footer
 st.markdown("---")
